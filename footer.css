@@ -1,0 +1,45 @@
+footer
+{
+	height: 20vmin;
+	background: #222;
+	color: #FFF;
+	padding-top: 3vmin;
+	padding-bottom: 3vmin;
+	font-weight: lighter;
+}
+#footer-CN
+{
+	height: 100%;
+	stroke: #FFF;
+}
+#footer-links
+{
+	width: 57%;
+	float: right;
+	font-size: 2vmin;
+}
+#footer-social
+{
+	text-align: center;
+}
+#footer-contacts
+{
+	text-align: right;
+	float: right;
+}
+#developed-by
+{
+	width: 100%;
+	font-size: 2vmin;
+	text-align: center;
+}
+footer a
+{
+	color: #FFF;
+}
+footer a:hover
+{
+	background: #FFF;
+	color: #222;
+}
+

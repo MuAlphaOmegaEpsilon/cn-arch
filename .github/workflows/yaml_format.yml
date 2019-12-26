@@ -1,0 +1,19 @@
+name: Prettier - Check yaml files format
+
+on:
+  push:
+    paths:
+      - .prettierrc.yaml
+      - .github/workflows/*
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: '10.x'
+      - name: Install prettier
+        run: sudo npm install --global prettier
+      - name: Run prettier on YAML
+        run: prettier .github/workflows/*.yml --check

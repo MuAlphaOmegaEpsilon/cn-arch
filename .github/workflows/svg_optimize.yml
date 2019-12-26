@@ -1,0 +1,32 @@
+name: SVGO - Check SVG files are optimized
+
+on:
+  push:
+    paths:
+      - img/*.svg
+      - docs/img/*.svg
+jobs:
+  svgo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: '10.x'
+      - name: Install SVGO
+        run: sudo npm install --global svgo
+      - name: Run SVGO on non-deployed SVG
+        run: |
+          mkdir output
+          svgo --multipass -f img/ -o output
+          for SVG_FILE in $(ls output | grep ".svg"); do
+            diff img/"${SVG_FILE}" output/"${SVG_FILE}"
+          done
+      - name: Run SVGO on deployed SVG
+        run: |
+          cd docs
+          mkdir output
+          svgo --multipass -f img/ -o output
+          for SVG_FILE in $(ls output | grep ".svg"); do
+            diff img/"${SVG_FILE}" output/"${SVG_FILE}"
+          done

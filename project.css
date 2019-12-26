@@ -1,0 +1,55 @@
+header a
+{
+	height: 6vmin;
+	margin-top: 3vmin;
+	margin-bottom: 3vmin;
+	display: block;
+}
+header a:hover
+{
+	color: #000;
+	background-color: #FFF;
+}
+#logo-CN
+{
+	width: 6vmin;
+	height: 6vmin;
+	stroke-width: 2;
+}
+#logo-arch-studio
+{
+	/* This element is 6.75 times wider than its font-size */
+	font-size: calc(6vmin * 0.852);
+	font-family: Quicksand, Helvetica, sans-serif;
+	margin-top: calc(3vmin - 6vmin * 0.852 * 0.8 / 2);
+	animation: fade-in 2s linear 0.75s backwards;
+}
+#title
+{
+	width: 100%;
+	font-size: 2.2vmin;
+	font-weight: bold;
+}
+#info
+{
+	width: 100%;
+	font-size: 2vmin;
+	font-weight: lighter;
+	margin-bottom: 3vmin;
+}
+#description
+{
+	text-align: justify;
+}
+main
+{
+	padding-bottom: 3vmin;
+	font-size: 2vmin;
+	/* The content needs to occupy at least all the space needed to align the footer at the bottom of the viewport. */
+	min-height: calc(100vh - 12vmin - 20vmin);
+}
+img
+{
+	margin-top: 3vmin;
+	margin-bottom: 3vmin;
+}

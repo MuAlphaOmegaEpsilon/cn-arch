@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+ <title>CN ArchStudio</title>
+ <meta name="Description" content="Claudia Negrini's architectural portfolio.">
+ <meta charset="utf-8">
+ <meta name="theme-color" content="#ffffff">
+ <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, viewport-fit=cover">
+ <link rel="icon" type="image/png" sizes="196x196" href="icon.png">
+ <link rel="shortcut icon" type="image/png" sizes="196x196" href="icon.png">
+ <link rel="apple-touch-icon" href="apple-touch-icon.png">
+ <link rel="favicon" href="favicon.ico">
+ <link rel="stylesheet" href="common.css">
+ <link rel="stylesheet" href="index.css">
+ <link rel="stylesheet" href="footer.css">
+ <!--base href="https://mualphaomegaepsilon.github.io/cn-arch/" target="_blank"-->
+</head>
+<body>
+
+ <header>
+  <div id="logo">
+   <svg id="logo-CN" viewbox="0 0 52 52">
+    <path id="logo-C" d="M26,1 A25,25 0 0 0 26,51"></path>
+    <polyline id="logo-N" points="29,51 29,1 46,41 46,11"></polyline>
+   </svg>
+   <p id="logo-arch-studio" class="fadein">ARCH STUDIO</p>
+  </div>
+  <div id="whoiam" class="fadein">
+   <a href="claudia-negrini.html">CLAUDIA NEGRINI</a>
+  </div>
+  <svg id="arrow-down" viewbox="0 0 10 7" onclick="document.getElementById('content').scrollIntoView()">
+   <polyline points="1,1 5,6 9,1"></polyline>
+  </svg>
+ </header>
+
+ <main id="content">
+  <div class="project">
+   <p><b>PISCINA NELL'OLIVETO</b> MONTECATINI TERME, TOSCANA - 2022</p>
+   <a href="piscina-oliveto.html">
+    <img alt="Immagine di progetto: piscina nell'oliveto" src="piscina-oliveto.webp">
+   </a>
+  </div>
+  <div class="project">
+   <p><b>APPARTAMENTO SOLFERINO</b> MONTECATINI TERME, TOSCANA - 2024</p>
+   <a href="appartamento-solferino.html">
+    <img alt="Immagine di progetto: appartamento solferino" src="appartamento-solferino.webp">
+   </a>
+  </div>
+ </main>
+
+ <div id="pager">
+ </div>
+
+ include(footer.html)
+
+</body>
+</html>
+
+<script type="text/javascript">
+ const PROJECTS_PER_PAGE = 3;
+ const CONTENT = document.getElementById('content');
+ const PROJECTS = content.children;
+ const PAGER = document.getElementById("pager");
+ var current_page_idx = 0;
+
+ function setPage(page_index, visibility)
+ {
+  for (var i = 0; i < PROJECTS_PER_PAGE; i++)
+  {
+   var prj_idx = page_index * PROJECTS_PER_PAGE + i;
+   if (prj_idx >= PROJECTS.length)
+    return;
+   PROJECTS[prj_idx].style.display = visibility;
+  }
+ }
+ function goToPage(index)
+ {
+  if (index === current_page_idx)
+   return;
+  console.log("goToPage(" + index + ")")
+  setPage(current_page_idx, "none");
+  PAGER.children[current_page_idx].removeAttribute("class");
+  current_page_idx = index;
+  setPage(current_page_idx, "inherit");
+  PAGER.children[current_page_idx].setAttribute("class", "active");
+  content.scrollIntoView();
+ }
+
+ var pages = Math.ceil(PROJECTS.length / PROJECTS_PER_PAGE);
+ for (var i = 0; i < pages;)
+ {
+  var node = document.createElement("page");
+  node.setAttribute("onclick", "goToPage(" + i++ + ")");
+  node.appendChild(document.createTextNode(i));
+  PAGER.appendChild(node);
+ }
+ setPage(0, "inherit");
+ PAGER.children[0].setAttribute("class", "active");
+</script>

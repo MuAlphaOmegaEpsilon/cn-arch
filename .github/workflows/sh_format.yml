@@ -1,0 +1,12 @@
+name: Prettier - Check markdown files format
+
+on:
+  push:
+    paths: script/*.sh
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Run shellcheck
+        run: shellcheck scripts/*.sh

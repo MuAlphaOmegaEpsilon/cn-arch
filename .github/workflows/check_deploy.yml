@@ -1,0 +1,27 @@
+name: Check deployed build
+
+on:
+  push:
+    paths:
+      - docs/*
+      - img/*
+      - script/deploy.sh
+      - *.m4
+      - *html
+      - style.css
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: '10.x'
+      - name: Install tools used to deploy
+        run: sudo npm install --global html-inline csso-cli
+      - name: Rename docs/ folder to tmp/
+        run: mv docs/ docs-original/
+      - name: Run deploy script
+        run: ./scripts/deploy.sh
+      - name: Look for differences
+        run: diff -qr docs/ docs-original/

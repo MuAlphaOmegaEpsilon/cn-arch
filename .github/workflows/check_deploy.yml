@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: '10.x'
       - name: Install tools used to deploy
-        run: sudo npm install --global html-inline csso-cli
+        run: sudo npm install --global inliner
       - name: Rename docs/ folder to tmp/
         run: mv docs/ docs-original/
       - name: Run deploy script

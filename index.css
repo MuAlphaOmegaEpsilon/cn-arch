@@ -83,7 +83,7 @@ main b
 #pager
 {
 	width: 100%;
-	margin-bottom: 10vmin;
+	padding-bottom: 10vmin;
 	text-align: center;
 }
 page

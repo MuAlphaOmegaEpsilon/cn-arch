@@ -1,8 +1,6 @@
 footer
 {
 	height: 20vmin;
-	background: #222;
-	color: #FFF;
 	padding-top: 3vmin;
 	padding-bottom: 3vmin;
 	font-weight: lighter;
@@ -10,7 +8,7 @@ footer
 #footer-CN
 {
 	height: 100%;
-	stroke: #FFF;
+	stroke: white;
 }
 #footer-links
 {
@@ -35,11 +33,11 @@ footer
 }
 footer a
 {
-	color: #FFF;
+	color: white;
 }
 footer a:hover
 {
-	background: #FFF;
+	background: white;
 	color: #222;
 }
 

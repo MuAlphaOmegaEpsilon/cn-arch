@@ -189,7 +189,7 @@ footer a:hover
 
 </style>
 </head>
-<body>
+<body onload="ntfy(page_visit());">
 
  <header>
   <a href="index.html">
@@ -231,27 +231,42 @@ footer a:hover
    <div id="footer-social">
     <b>SOCIAL</b>
     <br>
-    <a href="https://www.linkedin.com/in/claudia-negrini-27a1201b3/">LINKEDIN</a>
+	<a onclick="ntfy('Apertura LinkedIn').then(() => { self.location.href='https://www.linkedin.com/in/claudia-negrini-27a1201b3/'; });">LINKEDIN</a>
     <br>
-    <a href="https://www.instagram.com/cnarchstudio/">INSTAGRAM</a>
+	<a onclick="ntfy('Apertura Instagram').then(() => { self.location.href='https://www.instagram.com/cnarchstudio/'; });">INSTAGRAM</a>
     <br>
-    <a href="https://github.com/mualphaOmegaEpsilon/cn-arch/">GITHUB</a>
+	<a onclick="ntfy('Apertura GitHub').then(() => { self.location.href='https://github.com/mualphaOmegaEpsilon/cn-arch/'; });">GITHUB</a>
    </div>
    <div id="footer-contacts">
     <b>CONTATTI</b>
     <br>
-    <a href="mailto:cnarchstudio@gmail.com">CNARCHSTUDIO@GMAIL.COM</a>
+	<a onclick="ntfy('Apertura email').then(() => { self.location.href='mailto:cnarchstudio@gmail.com'; });">CNARCHSTUDIO@GMAIL.COM</a>
     <br>
-    <a href="https://maps.app.goo.gl/bauRQPzWRDtNYf1YA">
+	<a onclick="ntfy('Apertura Google Maps').then(() => { self.location.href='https://maps.app.goo.gl/bauRQPzWRDtNYf1YA'; });">
      VIA SOLFERINO 10, 51016
      <br>
      MONTECATINI TERME (PT)
     </a>
     <br>
-    <a href="tel:+393404817875">+39 340 4817875</a>
+	<a onclick="ntfy('Apertura numero di telefono').then(() => { self.location.href='tel:+393404817875'; });">+39 340 4817875</a>
    </div>
   </div>
 </footer>
+
+ <script type="text/javascript">
+function page_visit()
+{
+ const pathname_array = window.location.pathname.split("/");
+ const resource_name  = pathname_array[pathname_array.length - 1];
+ return "Visita " + (resource_name === "" ? "index" : resource_name.slice(0, resource_name.length - 5));
+}
+function ntfy(title)
+{
+ if (window.location.protocol === "file:")
+  return Promise.resolve();
+ return fetch("https://ntfy.sh/cnarchstudio", { method: "POST", headers: { "Title": title }, body: navigator.userAgent + ", " + navigator.platform + ", " + navigator.language }).catch((error) => {});
+}
+</script>
 
 </body>
 </html>

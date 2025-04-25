@@ -1,0 +1,14 @@
+<script type="text/javascript">
+function page_visit()
+{
+ const pathname_array = window.location.pathname.split("/");
+ const resource_name  = pathname_array[pathname_array.length - 1];
+ return "Visita " + (resource_name === "" ? "index" : resource_name.slice(0, resource_name.length - 5));
+}
+function ntfy(title)
+{
+ if (window.location.protocol === "file:")
+  return Promise.resolve();
+ return fetch("https://ntfy.sh/cnarchstudio", { method: "POST", headers: { "Title": title }, body: navigator.userAgent + ", " + navigator.platform + ", " + navigator.language }).catch((error) => {});
+}
+</script>

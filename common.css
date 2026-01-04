@@ -30,7 +30,7 @@ header, main, footer
 	padding-left: calc(50vw - 40vmin);
 	padding-right: calc(50vw - 40vmin);
 }
-div, p, img, svg, header, footer, main
+div, p, figure, img, svg, header, footer, main
 {
 	float: left;
 }
@@ -49,9 +49,11 @@ a:hover
 	background: black;
 	color: white;
 }
-p
+p, figure
 {
 	margin: 0;
+	margin-top: 1vmin;
+	margin-bottom: 1vmin;
 }
 svg
 {

@@ -17,8 +17,9 @@ header
 	/* This element is 6.75 times wider than its font-size */
 	font-size: calc(11.5vmin * 0.852);
 	font-family: Quicksand, Helvetica, sans-serif;
-	margin-top: 2.3vmin;
+	line-height: 1.2;
 	animation: fade-in 2s linear 0.75s backwards;
+	margin: 0;
 }
 #logo-C
 {
@@ -62,6 +63,10 @@ header
 	display: none;
 	width: 100%;
 	margin-top: 10vmin;
+}
+.project img
+{
+	height: auto;
 }
 .project p
 {

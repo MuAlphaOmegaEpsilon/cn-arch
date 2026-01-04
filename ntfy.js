@@ -1,4 +1,3 @@
-<script type="text/javascript">
 function page_visit()
 {
  const pathname_array = window.location.pathname.split("/");
@@ -11,4 +10,3 @@ function ntfy(title)
   return Promise.resolve();
  return fetch("https://ntfy.sh/cnarchstudio", { method: "POST", headers: { "Title": title }, body: navigator.userAgent + ", " + navigator.platform + ", " + navigator.language }).catch((error) => {});
 }
-</script>

@@ -17,6 +17,7 @@ m4 index.html > docs/index.html
 m4 -DFILE=claudia-negrini.html project-template.html > docs/claudia-negrini.html
 
 for PROJECT_FILE in $(find . -maxdepth 1 -name "project-*.html" | grep -v project-template.html); do
-	m4 -DFILE=${PROJECT_FILE} project-template.html > docs/$(echo ${PROJECT_FILE} | colrm 1 10)
+	PROJECT_NAME=$(echo ${PROJECT_FILE} | colrm 1 10 | cut -d . -f 1)
+	m4 -DFILE=${PROJECT_FILE} project-template.html > docs/${PROJECT_NAME}.html
 done
 

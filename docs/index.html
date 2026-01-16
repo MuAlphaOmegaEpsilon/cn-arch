@@ -58,13 +58,29 @@ header, main, footer
 	padding-left: calc(50vw - 40vmin);
 	padding-right: calc(50vw - 40vmin);
 }
-div, p, figure, img, svg, header, footer, main
+div, p, figure, img, svg, header, main, footer, article
 {
 	float: left;
 }
-b
+h1
 {
+	text-transform: uppercase;
+	width: 100%;
+	font-size: 2.2vmin;
 	font-weight: bold;
+	margin: 0;
+}
+h2
+{
+	text-transform: uppercase;
+	width: 100%;
+	font-size: 2vmin;
+	margin-top: 0;
+	margin-bottom: 1vmin;
+}
+img
+{
+	height: auto;
 }
 a
 {
@@ -112,18 +128,15 @@ header
 	font-size: calc(11.5vmin * 0.852);
 	font-family: Quicksand, Helvetica, sans-serif;
 	line-height: 1.2;
-	animation: fade-in 2s linear 0.75s backwards;
 	margin: 0;
 }
 #logo-C
 {
 	stroke-dasharray: 79;
-	animation: drawC 0.5s ease-in 0.1s backwards;
 }
 #logo-N
 {
 	stroke-dasharray: 124;
-	animation: drawN 0.5s ease-out 0.6s backwards;
 }
 #whoiam
 {
@@ -140,41 +153,19 @@ header
 	cursor: pointer;
 	animation: fade-in 3s linear 1.5s backwards, bounce 0.5s ease-out infinite alternate;
 }
-.fadein
-{
-	animation: fade-in 3s linear 1.5s backwards;
-}
-@keyframes fade-in { from { opacity: 0; };              to { opacity: 1; };                   }
-@keyframes drawC   { from { stroke-dashoffset: 79; }    to { stroke-dashoffset: 0; }          }
-@keyframes drawN   { from { stroke-dashoffset: 124; }   to { stroke-dashoffset: 0; }          }
 @keyframes bounce  { from { transform: translateY(0); } to { transform: translateY(-2vmin); } }
 
 /*******************/
 /*      MAIN       */
 /*******************/
-.project
+article
 {
-	display: none;
-	width: 100%;
-	margin-top: 10vmin;
+	margin-top: 2vmin;
+	margin-bottom: 2vmin;
 }
-.project img
+h2
 {
-	height: auto;
-}
-.project p
-{
-	width: 100%;
-	font-size: 2.2vmin;
-	margin-bottom: 1vmin;
-}
-main
-{
-	padding-bottom: 10vmin;
-}
-main b
-{
-	margin-right: 1.5vmin;
+	font-weight: bold;
 }
 /*******************/
 /*      PAGER      */
@@ -218,6 +209,11 @@ page.active:hover
 	padding-top: 3vmin;
 	padding-bottom: 3vmin;
 	font-weight: lighter;
+	font-size: 2vmin;
+}
+address
+{
+	line-height: 1.2;
 }
 #footer-CN
 {
@@ -226,18 +222,25 @@ page.active:hover
 }
 #footer-links
 {
-	width: 57%;
+	width: 68%;
 	float: right;
-	font-size: 2vmin;
-}
-#footer-social
-{
-	text-align: center;
 }
 #footer-contacts
 {
+	text-align: center;
+	line-height: 3.0;
+}
+#footer-social
+{
+	padding-top: 2.8vmin;
 	text-align: right;
 	float: right;
+	line-height: 3.0;
+}
+#footer-copyright
+{
+	width: 100%;
+	text-align: center;
 }
 #developed-by
 {
@@ -258,7 +261,7 @@ footer a:hover
 
  </style>
 </head>
-<body onload="ntfy(page_visit());">
+<body>
 
  <header>
   <div id="logo">
@@ -271,42 +274,40 @@ footer a:hover
   <div id="whoiam" class="fadein">
    <a href="claudia-negrini.html">CLAUDIA NEGRINI</a>
   </div>
-  <svg id="arrow-down" viewbox="0 0 10 7" onclick="document.getElementById('content').scrollIntoView()">
-   <polyline points="1,1 5,6 9,1"/>
-  </svg>
+  <svg id="arrow-down" viewbox="0 0 10 7" onclick="document.getElementsByTagName('main')[0].scrollIntoView()"><polyline points="1,1 5,6 9,1"/></svg>
  </header>
 
- <main id="content">
-  <div class="project">
-   <p><b>PISCINA NELL'OLIVETO</b></p>
-   <a href="piscina-oliveto.html">
-    <img alt="PISCINA NELL'OLIVETO, IMMAGINE DI COPERTINA" src="piscina-oliveto.webp" width="2000" height="2000"/>
+ <main>
+  <article>
+   <h2>Piscina nell'oliveto</h2>
+   <a href="progetti/piscina-oliveto/">
+    <img src="progetti/piscina-oliveto/piscina-oliveto.webp" width="2000" height="2000" alt="Progetto di piscina moderna a profondità variabile in un oliveto toscano. Design con solarium in deck di legno, bordo in pietra chiara e inserimento paesaggistico.">
    </a>
-  </div>
-  <div class="project">
-   <p><b>APPARTAMENTO SOLFERINO</b></p>
-   <a href="appartamento-solferino.html">
-    <img alt="APPARTAMENTO SOLFERINO, IMMAGINE DI COPERTINA" src="appartamento-solferino.webp" width="2000" height="2000"/>
+  </article>
+  <article>
+   <h2>Appartamento Solferino</h2>
+   <a href="progetti/appartamento-solferino/">
+    <img alt="APPARTAMENTO SOLFERINO, IMMAGINE DI COPERTINA" src="progetti/appartamento-solferino/copertina.webp" width="2000" height="2000">
    </a>
-  </div>
-  <div class="project">
-   <p><b>BAGNO SCOTTO</b></p>
-   <a href="bagno-scotto.html">
-    <img alt="BAGNO SCOTTO, IMMAGINE DI COPERTINA" src="bagno-scotto-copertina.webp" width="4437" height="3865"/>
+  </article>
+  <article>
+   <h2>Bagno Scotto</h2>
+   <a href="progetti/bagno-scotto/">
+    <img alt="BAGNO SCOTTO, IMMAGINE DI COPERTINA" src="progetti/bagno-scotto/laterale.webp" width="4437" height="3865">
    </a>
-  </div>
-  <div class="project">
-   <p><b>LAPIDE EDV</b></p>
-   <a href="lapide-edv.html">
-    <img alt="LAPIDE EDV, IMMAGINE DI COPERTINA" src="lapide-edv-copertina.webp" width="772" height="717"/>
+  </article>
+  <article>
+   <h2>Lapide EDV</h2>
+   <a href="progetti/lapide-edv/">
+    <img alt="LAPIDE EDV, IMMAGINE DI COPERTINA" src="progetti/lapide-edv/lapide.webp" width="772" height="717">
    </a>
-  </div>
-  <div class="project">
-   <p><b>CONCORSO SCUOLA E. FERMI</b></p>
-   <a href="concorso-scuola-fermi.html">
-    <img alt="CONCORSO SCUOLA E. FERMI, IMMAGINE DI COPERTINA" src="concorso-scuola-fermi-copertina.webp" width="2321" height="2321"/>
+  </article>
+  <article>
+   <h2>Concorso scuola E. Fermi</h2>
+   <a href="progetti/concorso-scuola-fermi/">
+    <img alt="CONCORSO SCUOLA E. FERMI, IMMAGINE DI COPERTINA" src="progetti/concorso-scuola-fermi/polo-scolastico.webp" width="2321" height="2321">
    </a>
-  </div>
+  </article>
  </main>
 
  <div id="pager">
@@ -320,38 +321,33 @@ footer a:hover
     </svg>
   </a>
   <div id="footer-links">
+    <div id="footer-contacts">
+      <a onclick="ntfy('Apertura email').then(() => { self.location.href='mailto:cnarchstudio@gmail.com'; });">CNARCHSTUDIO@GMAIL.COM</a>
+      <address>
+       <a onclick="ntfy('Apertura Google Maps').then(() => { self.location.href='https://maps.app.goo.gl/bauRQPzWRDtNYf1YA'; });">
+         VIA SOLFERINO 10, 51016
+         <br>
+         MONTECATINI TERME (PT)
+       </a>
+      </address>
+      <a onclick="ntfy('Apertura numero di telefono').then(() => { self.location.href='tel:+393404817875'; });">+39 340 4817875</a>
+    </div>
     <div id="footer-social">
-      <b>SOCIAL</b>
-      <br>
       <a onclick="ntfy('Apertura LinkedIn').then(() => { self.location.href='https://www.linkedin.com/in/claudia-negrini-27a1201b3/'; });">LINKEDIN</a>
       <br>
       <a onclick="ntfy('Apertura Instagram').then(() => { self.location.href='https://www.instagram.com/cnarchstudio/'; });">INSTAGRAM</a>
-      <br>
-      <a onclick="ntfy('Apertura GitHub').then(() => { self.location.href='https://github.com/mualphaOmegaEpsilon/cn-arch/'; });">GITHUB</a>
-    </div>
-    <div id="footer-contacts">
-      <b>CONTATTI</b>
-      <br>
-      <a onclick="ntfy('Apertura email').then(() => { self.location.href='mailto:cnarchstudio@gmail.com'; });">CNARCHSTUDIO@GMAIL.COM</a>
-      <br>
-      <a onclick="ntfy('Apertura Google Maps').then(() => { self.location.href='https://maps.app.goo.gl/bauRQPzWRDtNYf1YA'; });">
-        VIA SOLFERINO 10, 51016
-        <br>
-        MONTECATINI TERME (PT)
-      </a>
-      <br>
-      <a onclick="ntfy('Apertura numero di telefono').then(() => { self.location.href='tel:+393404817875'; });">+39 340 4817875</a>
     </div>
   </div>
+  <p id="footer-copyright">Copyright © <script type="text/javascript">document.write(new Date().getFullYear())</script> CNArchStudio. Tutti i diritti riservati.</p>
 </footer>
 
 </body>
 </html>
 
 <script type="text/javascript">
-const CONTENT  = document.getElementById('content');
+const CONTENT  = document.getElementsByTagName('main')[0];
 const PAGER    = document.getElementById("pager");
-const PROJECTS = content.children;
+const PROJECTS = CONTENT.children;
 const PROJECTS_PER_PAGE = 10;
 var current_page_idx    =  0;
 
@@ -372,7 +368,7 @@ function goToPage(index)
 	current_page_idx = index;
 	setPage(current_page_idx, "inherit");
 	PAGER.children[current_page_idx].setAttribute("class", "active");
-	content.scrollIntoView();
+	CONTENT.scrollIntoView();
 }
 
 var pages = Math.ceil(PROJECTS.length / PROJECTS_PER_PAGE);
@@ -391,12 +387,27 @@ function page_visit()
  const resource_name  = pathname_array[pathname_array.length - 1];
  return "Visita " + (resource_name === "" ? "index" : resource_name.slice(0, resource_name.length - 5));
 }
+
 function ntfy(title)
 {
- if (window.location.protocol === "file:")
+ if (!window.location.host.startsWith("www.cnarchstudio.com"))
   return Promise.resolve();
- return fetch("https://ntfy.sh/cnarchstudio", { method: "POST", headers: { "Title": title }, body: navigator.userAgent + ", " + navigator.platform + ", " + navigator.language }).catch((error) => {});
+ // storage_promise = navigator.storage.estimate()
+ body_text =  "UserAgent: " + navigator.userAgent + "\n"
+ body_text += "Platform: " + navigator.platform  + "\n"
+ body_text += "Languages: " + navigator.language  + "\n"
+ body_text += "Display: " + screen.width + "x" + screen.height + "\n"
+ body_text += "HW: " + navigator.hardwareConcurrency + " threads, " + (navigator.deviceMemory ?? "--") + "GB\n"
+ // storage = await storage_promise
+ // body_text += "Storage:   " + (1 - storage.usage / storage.quota) * 100 + "%"
+ return fetch("https://ntfy.sh/cnarchstudio",
+              { method: "POST",
+                headers: { "Title": body_text },
+                body: body_text
+              }
+             ).catch((error) => {});
 }
+ntfy(page_visit());
 
 </script>
 

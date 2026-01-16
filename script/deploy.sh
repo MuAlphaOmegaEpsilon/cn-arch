@@ -3,21 +3,39 @@ set -euf
 
 cd "$(dirname $0)"/..
 
-find docs/ -name "*.html" -exec rm {} \;
+# To compress a PNG image to WEBP
+# cwebp example.png -q 85 -m 6 -sharp_yuv -blend_alpha 0xffffff -o example.webp
 
-rm -r .preprocessed
-mkdir -p .preprocessed
-for CSS_FILE in $(ls | grep ".css"); do
-	yui-compressor "${CSS_FILE}" --output docs/"${CSS_FILE}"
+rm -rf docs/
+mkdir docs/
+echo "www.cnarchstudio.com" > docs/CNAME
+cp -r progetti/ docs/
+cp -a icons/. docs/
+cp template.html docs/
+for CSS_FILE in $(find . -maxdepth 1 -name "*.css"     ); do esbuild --minify "${CSS_FILE}" > docs/"${CSS_FILE}"; done
+for JS_FILE  in $(find . -maxdepth 1 -name "*.js"      ); do cp "${JS_FILE}" docs/"${JS_FILE}";  done
+#for JS_FILE  in $(find . -maxdepth 1 -name "*.js"      ); do esbuild --minify  "${JS_FILE}" > docs/"${JS_FILE}";  done
+for PRJ_DIR  in $(find progetti/ -mindepth 1 -type d); do
+	m4  -DFILE="${PRJ_DIR}/index.html" \
+	    -DDIR_PREFIX="../../" \
+	    -DMETA_TITLE="include(${PRJ_DIR}/meta-title.txt)" \
+	    -DMETA_DESCRIPTION="include(${PRJ_DIR}/meta-description.txt)" \
+	    -DH1="$(cat ${PRJ_DIR}/meta-title.txt | cut -d \| -f 1)" \
+	    -DH2="$(cat ${PRJ_DIR}/meta-title.txt | cut -d \| -f 2)" \
+	    docs/template.html > docs/${PRJ_DIR}/index.html
 done
-
-find . -maxdepth 1 -name "*.css" -exec ln -s .{} .preprocessed/ \;
-m4 index.html > docs/index.html
-
-m4 -DFILE=claudia-negrini.html project-template.html > docs/claudia-negrini.html
-
-for PROJECT_FILE in $(find . -maxdepth 1 -name "project-*.html" | grep -v project-template.html); do
-	PROJECT_NAME=$(echo ${PROJECT_FILE} | colrm 1 10 | cut -d . -f 1)
-	m4 -DFILE=${PROJECT_FILE} project-template.html > docs/${PROJECT_NAME}.html
-done
-
+m4 -DDIR_PREFIX="/" index.html > docs/index.html
+m4 -DFILE=claudia-negrini.html \
+   -DDIR_PREFIX="/" \
+   -DMETA_TITLE="Biografia dell'arch. Claudia Negrini, fondatrice di CNArchStudio" \
+   -DMETA_DESCRIPTION="Il percorso professionale dell'Arch. Claudia Negrini inizia a Pisa, con la laurea magistrale in Ingegneria Edile-Architettura." \
+   -DH1="Biografia professionale" \
+   -DH2="Claudia Negrini" \
+   docs/template.html > docs/claudia-negrini.html
+find docs/ -name "*.txt" -exec rm {} \; # All txt files were temporary
+find docs/ -name "*.svg" -exec rm {} \; # All svg files must be included in html ones
+find docs/ -name "*.css" -exec rm {} \; # All css files must be included in html ones
+find docs/ -name "*.js"  -exec rm {} \; # All  js files must be included in html ones
+rm docs/template.html
+cd docs
+http-server

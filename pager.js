@@ -1,6 +1,6 @@
-const CONTENT  = document.getElementById('content');
+const CONTENT  = document.getElementsByTagName('main')[0];
 const PAGER    = document.getElementById("pager");
-const PROJECTS = content.children;
+const PROJECTS = CONTENT.children;
 const PROJECTS_PER_PAGE = 10;
 var current_page_idx    =  0;
 
@@ -21,7 +21,7 @@ function goToPage(index)
 	current_page_idx = index;
 	setPage(current_page_idx, "inherit");
 	PAGER.children[current_page_idx].setAttribute("class", "active");
-	content.scrollIntoView();
+	CONTENT.scrollIntoView();
 }
 
 var pages = Math.ceil(PROJECTS.length / PROJECTS_PER_PAGE);

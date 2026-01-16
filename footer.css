@@ -4,6 +4,11 @@ footer
 	padding-top: 3vmin;
 	padding-bottom: 3vmin;
 	font-weight: lighter;
+	font-size: 2vmin;
+}
+address
+{
+	line-height: 1.2;
 }
 #footer-CN
 {
@@ -12,18 +17,25 @@ footer
 }
 #footer-links
 {
-	width: 57%;
+	width: 68%;
 	float: right;
-	font-size: 2vmin;
-}
-#footer-social
-{
-	text-align: center;
 }
 #footer-contacts
 {
+	text-align: center;
+	line-height: 3.0;
+}
+#footer-social
+{
+	padding-top: 2.8vmin;
 	text-align: right;
 	float: right;
+	line-height: 3.0;
+}
+#footer-copyright
+{
+	width: 100%;
+	text-align: center;
 }
 #developed-by
 {

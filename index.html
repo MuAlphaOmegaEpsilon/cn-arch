@@ -31,7 +31,7 @@
  include(footer.css)
  </style>
 </head>
-<body onload="ntfy(page_visit());">
+<body>
 
  <header>
   <div id="logo">
@@ -44,42 +44,40 @@
   <div id="whoiam" class="fadein">
    <a href="claudia-negrini.html">CLAUDIA NEGRINI</a>
   </div>
-  <svg id="arrow-down" viewbox="0 0 10 7" onclick="document.getElementById('content').scrollIntoView()">
-   <polyline points="1,1 5,6 9,1"/>
-  </svg>
+  <svg id="arrow-down" viewbox="0 0 10 7" onclick="document.getElementsByTagName('main')[0].scrollIntoView()"><polyline points="1,1 5,6 9,1"/></svg>
  </header>
 
- <main id="content">
-  <div class="project">
-   <p><b>PISCINA NELL'OLIVETO</b></p>
-   <a href="piscina-oliveto.html">
-    <img alt="PISCINA NELL'OLIVETO, IMMAGINE DI COPERTINA" src="piscina-oliveto.webp" width="2000" height="2000"/>
+ <main>
+  <article>
+   <h2>Piscina nell'oliveto</h2>
+   <a href="progetti/piscina-oliveto/">
+    <img src="progetti/piscina-oliveto/piscina-oliveto.webp" width="2000" height="2000" alt="Progetto di piscina moderna a profondità variabile in un oliveto toscano. Design con solarium in deck di legno, bordo in pietra chiara e inserimento paesaggistico.">
    </a>
-  </div>
-  <div class="project">
-   <p><b>APPARTAMENTO SOLFERINO</b></p>
-   <a href="appartamento-solferino.html">
-    <img alt="APPARTAMENTO SOLFERINO, IMMAGINE DI COPERTINA" src="appartamento-solferino.webp" width="2000" height="2000"/>
+  </article>
+  <article>
+   <h2>Appartamento Solferino</h2>
+   <a href="progetti/appartamento-solferino/">
+    <img alt="APPARTAMENTO SOLFERINO, IMMAGINE DI COPERTINA" src="progetti/appartamento-solferino/copertina.webp" width="2000" height="2000">
    </a>
-  </div>
-  <div class="project">
-   <p><b>BAGNO SCOTTO</b></p>
-   <a href="bagno-scotto.html">
-    <img alt="BAGNO SCOTTO, IMMAGINE DI COPERTINA" src="bagno-scotto-copertina.webp" width="4437" height="3865"/>
+  </article>
+  <article>
+   <h2>Bagno Scotto</h2>
+   <a href="progetti/bagno-scotto/">
+    <img alt="BAGNO SCOTTO, IMMAGINE DI COPERTINA" src="progetti/bagno-scotto/laterale.webp" width="4437" height="3865">
    </a>
-  </div>
-  <div class="project">
-   <p><b>LAPIDE EDV</b></p>
-   <a href="lapide-edv.html">
-    <img alt="LAPIDE EDV, IMMAGINE DI COPERTINA" src="lapide-edv-copertina.webp" width="772" height="717"/>
+  </article>
+  <article>
+   <h2>Lapide EDV</h2>
+   <a href="progetti/lapide-edv/">
+    <img alt="LAPIDE EDV, IMMAGINE DI COPERTINA" src="progetti/lapide-edv/lapide.webp" width="772" height="717">
    </a>
-  </div>
-  <div class="project">
-   <p><b>CONCORSO SCUOLA E. FERMI</b></p>
-   <a href="concorso-scuola-fermi.html">
-    <img alt="CONCORSO SCUOLA E. FERMI, IMMAGINE DI COPERTINA" src="concorso-scuola-fermi-copertina.webp" width="2321" height="2321"/>
+  </article>
+  <article>
+   <h2>Concorso scuola E. Fermi</h2>
+   <a href="progetti/concorso-scuola-fermi/">
+    <img alt="CONCORSO SCUOLA E. FERMI, IMMAGINE DI COPERTINA" src="progetti/concorso-scuola-fermi/polo-scolastico.webp" width="2321" height="2321">
    </a>
-  </div>
+  </article>
  </main>
 
  <div id="pager">

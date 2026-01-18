@@ -74,6 +74,10 @@ a:hover
 	background: black;
 	color: white;
 }
+p
+{
+	text-align: justify;
+}
 p, figure
 {
 	margin: 0;

@@ -23,12 +23,9 @@
  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
  <link rel="shortcut icon" type="image/png" sizes="196x196" href="icon.png">
- <link rel="manifest" href="/manifest.json">
  <link rel="favicon" href="favicon.ico" type="image/x-icon">
  <style>
- include(common.css)
  include(index.css)
- include(footer.css)
  </style>
 </head>
 <body>
@@ -39,56 +36,26 @@
     <path id="logo-C" d="M26,1 A25,25 0 0 0 26,51"/>
     <polyline id="logo-N" points="29,51 29,1 46,41 46,11"/>
    </svg>
-   <p id="logo-arch-studio" class="fadein">ARCH STUDIO</p>
+   <p id="logo-arch-studio">ARCHSTUDIO</p>
   </div>
-  <div id="whoiam" class="fadein">
-   <a href="claudia-negrini.html">CLAUDIA NEGRINI</a>
-  </div>
-  <svg id="arrow-down" viewbox="0 0 10 7" onclick="document.getElementsByTagName('main')[0].scrollIntoView()"><polyline points="1,1 5,6 9,1"/></svg>
+  <h1>Architettura, Ristrutturazioni e Interior Design</h1>
+  <h2>Sfruttiamo il potenziale inespresso degli spazi per migliorare la quotidianità di chi li vive</h2>
  </header>
 
  <main>
-  <article>
-   <h2>Piscina nell'oliveto</h2>
-   <a href="progetti/piscina-oliveto/">
-    <img src="progetti/piscina-oliveto/piscina-oliveto.webp" width="2000" height="2000" alt="Progetto di piscina moderna a profondità variabile in un oliveto toscano. Design con solarium in deck di legno, bordo in pietra chiara e inserimento paesaggistico.">
-   </a>
-  </article>
-  <article>
-   <h2>Appartamento Solferino</h2>
-   <a href="progetti/appartamento-solferino/">
-    <img alt="APPARTAMENTO SOLFERINO, IMMAGINE DI COPERTINA" src="progetti/appartamento-solferino/copertina.webp" width="2000" height="2000">
-   </a>
-  </article>
-  <article>
-   <h2>Bagno Scotto</h2>
-   <a href="progetti/bagno-scotto/">
-    <img alt="BAGNO SCOTTO, IMMAGINE DI COPERTINA" src="progetti/bagno-scotto/laterale.webp" width="4437" height="3865">
-   </a>
-  </article>
-  <article>
-   <h2>Lapide EDV</h2>
-   <a href="progetti/lapide-edv/">
-    <img alt="LAPIDE EDV, IMMAGINE DI COPERTINA" src="progetti/lapide-edv/lapide.webp" width="772" height="717">
-   </a>
-  </article>
-  <article>
-   <h2>Concorso scuola E. Fermi</h2>
-   <a href="progetti/concorso-scuola-fermi/">
-    <img alt="CONCORSO SCUOLA E. FERMI, IMMAGINE DI COPERTINA" src="progetti/concorso-scuola-fermi/polo-scolastico.webp" width="2321" height="2321">
-   </a>
-  </article>
+  <nav>
+   <a href="/progetti/" title="Guarda il portfolio progetti">Portfolio</a>
+   <span>|</span>
+   <a href="/blog/" title="Leggi gli articoli dello studio">Blog</a>
+   <span>|</span>
+   <a href="claudia-negrini.html" title="Scopri i membri dello studio">Chi siamo</a>
+  </nav>
  </main>
 
- <div id="pager">
- </div>
-
- include(footer.html)
 </body>
 </html>
 
 <script type="text/javascript">
-include(pager.js)
 include(ntfy.js)
 </script>
 

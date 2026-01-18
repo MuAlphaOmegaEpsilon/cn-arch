@@ -1,6 +1,6 @@
 footer
 {
-	height: 20vmin;
+	height: 26vmin;
 	padding-top: 3vmin;
 	padding-bottom: 3vmin;
 	font-weight: lighter;
@@ -13,21 +13,20 @@ address
 #footer-CN
 {
 	height: 100%;
-	stroke: white;
+	stroke: black;
 }
 #footer-links
 {
-	width: 68%;
+	width: 100%;
 	float: right;
 }
 #footer-contacts
 {
-	text-align: center;
+	text-align: left;
 	line-height: 3.0;
 }
 #footer-social
 {
-	padding-top: 2.8vmin;
 	text-align: right;
 	float: right;
 	line-height: 3.0;
@@ -36,20 +35,5 @@ address
 {
 	width: 100%;
 	text-align: center;
+	margin-top: 0;
 }
-#developed-by
-{
-	width: 100%;
-	font-size: 2vmin;
-	text-align: center;
-}
-footer a
-{
-	color: white;
-}
-footer a:hover
-{
-	background: white;
-	color: #222;
-}
-

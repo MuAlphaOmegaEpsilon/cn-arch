@@ -7,7 +7,7 @@ function page_visit()
 
 function ntfy(title)
 {
- if (!window.location.host.startsWith("www.cnarchstudio.com"))
+ if (window.location.startsWith("file:") || window.location.startsWith("192.168."))
   return Promise.resolve();
  // storage_promise = navigator.storage.estimate()
  body_text =  "UserAgent: " + navigator.userAgent + "\n"

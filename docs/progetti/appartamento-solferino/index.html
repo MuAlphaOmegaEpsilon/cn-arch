@@ -107,7 +107,7 @@
 
 function ntfy(title)
 {
- if (window.location.startsWith("file:") || window.location.startsWith("192.168."))
+ if (window.location.protocol == "file:" || window.location.host.startsWith("192.168."))
   return Promise.resolve();
  // storage_promise = navigator.storage.estimate()
  body_text =  "UserAgent: " + navigator.userAgent + "\n"

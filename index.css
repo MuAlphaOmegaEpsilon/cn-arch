@@ -94,8 +94,9 @@ a
 	cursor: pointer;
 	display: block;
 	text-align: center;
-	width: 32%;
+	width: 23%;
 	text-transform: uppercase;
+	letter-spacing: 0.5vmin;
 }
 a:hover
 {
@@ -104,10 +105,13 @@ a:hover
 }
 nav a:first-child
 {
+	width: 37%;
 	text-align: left;
 }
 nav a:last-child
 {
+	width: 37%;
 	text-align: right;
+	letter-spacing: 0.7vmin;
 }
 

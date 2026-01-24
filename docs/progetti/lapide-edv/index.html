@@ -102,7 +102,8 @@ function ntfy(title)
                 body: "UserAgent: " + navigator.userAgent + "\n" +
                       "Platform:  " + navigator.platform  + "\n" +
                       "Languages: " + navigator.language  + "\n" +
-                      "Display:   " + screen.width + "x" + screen.height + "\n"
+                      "Display:   " + screen.width + "x" + screen.height + "\n" +
+                      "Hardware:  " + navigator.hardwareConcurrency + " threads, " + (navigator.deviceMemory ?? "--") + "GB\n"
               }
              ).catch((error) => {});
 }

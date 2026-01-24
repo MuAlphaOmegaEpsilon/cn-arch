@@ -6,14 +6,16 @@ footer
 	font-weight: lighter;
 	font-size: 2vmin;
 }
+footer svg
+{
+	width: 10%;
+	stroke: none;
+	fill: black;
+	margin-top: 3vmin;
+}
 address
 {
 	line-height: 1.2;
-}
-#footer-CN
-{
-	height: 100%;
-	stroke: black;
 }
 #footer-links
 {
@@ -22,13 +24,8 @@ address
 }
 #footer-contacts
 {
-	text-align: left;
-	line-height: 3.0;
-}
-#footer-social
-{
-	text-align: right;
-	float: right;
+	width: 80%;
+	text-align: center;
 	line-height: 3.0;
 }
 #footer-copyright

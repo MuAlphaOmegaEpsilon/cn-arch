@@ -4,7 +4,7 @@ function page_visit()
  if (pathname === "/")
   return "index";
  if (pathname.endsWith("/"))
-  pathname = pathname.substr(0, pathname.length - 1);
+  pathname = pathname.substring(0, pathname.length - 1);
  const pathname_array = window.location.pathname.split("/");
  const resource_name  = pathname_array[pathname_array.length - 1];
  resource_name.slice(0, resource_name.length - 5);

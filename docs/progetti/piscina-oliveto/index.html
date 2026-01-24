@@ -102,7 +102,7 @@
  return "Visita " + (resource_name === "" ? "index" : resource_name.slice(0, resource_name.length - 5));
 }
 
-function ntfy(title)
+async function ntfy(title)
 {
  if (window.location.protocol == "file:" || window.location.host.startsWith("192.168."))
   return Promise.resolve();

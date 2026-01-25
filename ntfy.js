@@ -5,7 +5,7 @@ function page_visit()
   return "homepage";
  if (pathname.endsWith("/"))
   pathname = pathname.substring(0, pathname.length - 1);
- const pathname_array = window.location.pathname.split("/");
+ const pathname_array = pathname.split("/");
  return pathname_array[pathname_array.length - 1];
 }
 

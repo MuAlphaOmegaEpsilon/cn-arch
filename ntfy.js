@@ -9,10 +9,35 @@ function page_visit()
  return pathname_array[pathname_array.length - 1];
 }
 
+function isbot()
+{
+ return navigator.webdriver || [
+    "googlebot",
+    "bingbot",
+    "yandexbot",
+    "duckduckbot",
+    "slurp", // Yahoo
+    "baiduspider",
+    "ia_archiver", // Alexa
+    "facebookexternalhit",
+    "twitterbot",
+    "rogerbot", // Moz
+    "linkedinbot",
+    "embedly",
+    "quora link preview",
+    "showyoubot",
+    "outbrain",
+    "pinterest/0.",
+    "developers.google.com/+/web/snippet"
+  ].some(bot => navigator.userAgent.toLowerCase().includes(bot));
+}
+
 function ntfy(title)
 {
  if (window.location.protocol == "file:" || window.location.host.startsWith("192.168."))
   return Promise.resolve();
+ if (isbot())
+  title = "🤖 " + title;
  return fetch("https://ntfy.sh/cnarchstudio",
               { method: "POST",
                 headers: { "Title": title },

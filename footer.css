@@ -1,21 +1,34 @@
 footer
 {
-	height: 26vmin;
-	padding-top: 3vmin;
-	padding-bottom: 3vmin;
+	padding-bottom: 5vmin;
 	font-weight: lighter;
 	font-size: 2vmin;
+	color: #606060;
+}
+footer a
+{
+	color: #606060;
 }
 footer svg
 {
-	width: 10%;
+	width: 5%;
 	stroke: none;
+	fill: #D0D0D0;
+	margin-top: 9vmin;
+}
+footer a:hover
+{
+	color: black;
+	text-decoration: underline;
+}
+footer svg:hover
+{
 	fill: black;
-	margin-top: 3vmin;
 }
 address
 {
 	line-height: 1.2;
+	font-style: normal;
 }
 #footer-links
 {
@@ -24,13 +37,22 @@ address
 }
 #footer-contacts
 {
-	width: 80%;
+	width: 90%;
 	text-align: center;
-	line-height: 3.0;
+	line-height: 1;
+	letter-spacing: 0.2vmin;
+}
+#footer-contacts a
+{
+	width: 100%;
+	display: block;
+	margin-top: 2vmin;
+	margin-bottom: 2vmin;
 }
 #footer-copyright
 {
 	width: 100%;
 	text-align: center;
-	margin-top: 0;
+	margin-top: 3vmin;
+	letter-spacing: 0.3vmin;
 }

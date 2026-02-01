@@ -1,10 +1,18 @@
+#logo
+{
+	margin-bottom: 2.5vmin;
+}
 h1
 {
-	font-size: 4vmin;
-	letter-spacing: 1vh;
-	word-spacing: 1vh;
+	font-size: 2.8vmin;
+	letter-spacing: 0.5vmin;
 }
 h2
 {
-	font-weight: normal;
+	font-size: 2vmin;
+	letter-spacing: 0.4vmin;
+}
+main
+{
+	padding-bottom: 7vmin;
 }

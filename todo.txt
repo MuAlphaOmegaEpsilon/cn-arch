@@ -1,0 +1,8 @@
+- gestire didascalie immagine di progetto e articoli inserendole sotto l'immagine in grigio e con carattere piccolo
+- gestire immagini con formato avif e webp tramite srcset
+- JSON-LD
+- finire di inserire alt text
+- finire progetto su concorso rifonderia
+- fare una transizione dei caratteri da font size prefissato a em
+- pubblicizzare sito
+- scrivere privacy policy

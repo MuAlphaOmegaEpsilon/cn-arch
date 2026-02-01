@@ -1,0 +1,18 @@
+<svg id="logo" viewbox="0 0 305 52">
+ <path d="M26,1 A25,25 0 0 0 26,51"/>
+ <polyline points="29,51 29,1 46,41 46,11"/>
+ <g transform="translate(57,10) scale(0.86 0.86)">
+  <path d="M1,36 v-35 h13 a9,9,0,0,1,0,18 h-13"/>
+  <path d="M47,1 a16,17.5,0,1,0,0.0001,0"/>
+  <path d="M75,36 v-35 h13 a9,9,0,0,1,0,18 h-13 m13,0 a8,8,0,0,1,8,8 v9"/>
+  <path d="M107,1 h25 m-12.5,0 v35"/>
+  <path d="M143,1 h20 m-20,0 v35 m0,-18.5 h17"/>
+  <path d="M186,1 a16,17.5,0,1,0,0.0001,0"/>
+  <path d="M213,1 v35 h20"/>
+  <path d="M242,1 v35"/>
+  <path d="M269,1 a16,17.5,0,1,0,0.0001,0"/>
+ </g>
+ <g transform="translate(57,47) scale(0.86 0.86)" id="logo-underline" >
+  <line x1="0" x2="285"/>
+ </g>
+</svg>

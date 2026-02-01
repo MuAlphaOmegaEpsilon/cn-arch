@@ -1,0 +1,36 @@
+#logo
+{
+	margin-bottom: .5vmin;
+}
+h1
+{
+	text-align: center;
+	color: #303030;
+}
+h1
+{
+	font-size: 3vmin;
+	letter-spacing: 0.75vmin;
+}
+h2
+{
+	font-size: 2.8vmin;
+	letter-spacing: 0.5vmin;
+}
+h2 small
+{
+	font-size: 2vmin;
+	letter-spacing: 0.4vmin;
+}
+main
+{
+	margin-top: 5vmin;
+}
+article
+{
+	margin-bottom: 7vmin;
+}
+p
+{
+	margin: 0;
+}

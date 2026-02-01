@@ -42,7 +42,7 @@ address
 	line-height: 1;
 	letter-spacing: 0.2vmin;
 }
-#footer-contacts a
+#footer-contacts span
 {
 	width: 100%;
 	display: block;

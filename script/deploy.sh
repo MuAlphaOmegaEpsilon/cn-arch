@@ -18,6 +18,7 @@ cp logo.svg                 docs/
 cp -r blog/                 docs/
 cp -r progetti/             docs/
 cp -a icons/.               docs/
+cp -a robots.txt            docs/
 cp template.html            docs/
 for CSS_FILE in $(find . -maxdepth 1 -name "*.css"     ); do esbuild --minify "${CSS_FILE}" > docs/"${CSS_FILE}"; done
 for JS_FILE  in $(find . -maxdepth 1 -name "*.js"      ); do cp "${JS_FILE}" docs/"${JS_FILE}";  done
@@ -101,13 +102,12 @@ m4 -DCONTENT="include(claudia-negrini.html)" \
    docs/template.html > docs/claudia-negrini.html
 echo "</urlset>" >> docs/sitemap.xml
 find docs/ -name "copertina.html" -exec rm {} \; # All copertina.html files were temporary
-find docs/ -name "*.txt" -exec rm {} \; # All txt files were temporary
+find docs/ -name "*.txt" ! -name "robots.txt" -exec rm {} \; # All txt files, except robots.txt, were temporary
 find docs/ -name "*.svg" -exec rm {} \; # All svg files must be included in html ones
 find docs/ -name "*.css" -exec rm {} \; # All css files must be included in html ones
 find docs/ -name "*.js"  -exec rm {} \; # All  js files must be included in html ones
 rm docs/progetti.html # Remove intermediate file for docs/progetti/index.html generation
 rm docs/blog.html     # Remove intermediate file for docs/progetti/index.html generation
 rm docs/template.html
-cp robots.txt docs/
 cd docs
 http-server -c -1

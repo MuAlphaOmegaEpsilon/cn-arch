@@ -108,5 +108,6 @@ find docs/ -name "*.js"  -exec rm {} \; # All  js files must be included in html
 rm docs/progetti.html # Remove intermediate file for docs/progetti/index.html generation
 rm docs/blog.html     # Remove intermediate file for docs/progetti/index.html generation
 rm docs/template.html
+cp robots.txt docs/
 cd docs
 http-server -c -1

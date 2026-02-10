@@ -32,6 +32,7 @@ for ARTICLE_DIR in $(find blog/ -mindepth 1 -type d); do
 	    -DDIR_PREFIX="../../" \
 	    -DMETA_TITLE="include(${ARTICLE_DIR}/meta-title.txt)" \
 	    -DMETA_DESCRIPTION="include(${ARTICLE_DIR}/meta-description.txt)" \
+	    -DLD_JSON="include(${ARTICLE_DIR}/ld.json)" \
 	    -DLOGO_SVG="docs/blog/logo.svg" \
 	    -DINCLUDE="include(docs/progetto.css)" \
 	    -DH1="$(cat ${ARTICLE_DIR}/meta-title.txt | cut -d \| -f 1)" \
@@ -44,6 +45,7 @@ for PRJ_DIR in $(find progetti/ -mindepth 1 -type d); do
 	    -DDIR_PREFIX="../../" \
 	    -DMETA_TITLE="include(${PRJ_DIR}/meta-title.txt)" \
 	    -DMETA_DESCRIPTION="include(${PRJ_DIR}/meta-description.txt)" \
+	    -DLD_JSON="include(${PRJ_DIR}/ld.json)" \
 	    -DLOGO_SVG="docs/progetti/logo.svg" \
 	    -DINCLUDE="include(docs/progetto.css)" \
 	    -DH1="$(cat ${PRJ_DIR}/meta-title.txt | cut -d \| -f 1)" \
@@ -75,6 +77,7 @@ m4 -DCONTENT="include(docs/progetti.html)" \
    -DDIR_PREFIX="../" \
    -DMETA_TITLE="Portfolio | I progetti più significativi dello studio" \
    -DMETA_DESCRIPTION="Realizzazioni delle opere originali e concorsi di idee, motivati razionalmente e documentati da immagini." \
+   -DLD_JSON="include(docs/progetti/ld.json)" \
    -DLOGO_SVG="docs/logo.svg" \
    -DINCLUDE="include(docs/menu.css)" \
    -DH1="Portfolio" \
@@ -85,6 +88,7 @@ m4 -DCONTENT="include(docs/blog.html)" \
    -DDIR_PREFIX="../" \
    -DMETA_TITLE="Blog | Articoli e riflessioni sull'architettura" \
    -DMETA_DESCRIPTION="Pensieri e considerazioni personali sull'architettura, su come le persone vivono quotidianamente gli spazi e sui clichè moderni." \
+   -DLD_JSON="include(docs/blog/ld.json)" \
    -DLOGO_SVG="docs/logo.svg" \
    -DINCLUDE="include(docs/menu.css)" \
    -DH1="Blog" \
@@ -95,6 +99,7 @@ m4 -DCONTENT="include(claudia-negrini.html)" \
    -DDIR_PREFIX="/" \
    -DMETA_TITLE="Biografia dell'arch. Claudia Negrini, fondatrice di CNArchStudio" \
    -DMETA_DESCRIPTION="Il percorso professionale dell'Arch. Claudia Negrini inizia a Pisa, con la laurea magistrale in Ingegneria Edile-Architettura." \
+   -DLD_JSON="include(docs/claudia-negrini.json)" \
    -DLOGO_SVG="docs/logo.svg" \
    -DINCLUDE="include(docs/progetto.css)" \
    -DH1="Biografia professionale" \
@@ -103,9 +108,10 @@ m4 -DCONTENT="include(claudia-negrini.html)" \
 echo "</urlset>" >> docs/sitemap.xml
 find docs/ -name "copertina.html" -exec rm {} \; # All copertina.html files were temporary
 find docs/ -name "*.txt" ! -name "robots.txt" -exec rm {} \; # All txt files, except robots.txt, were temporary
-find docs/ -name "*.svg" -exec rm {} \; # All svg files must be included in html ones
-find docs/ -name "*.css" -exec rm {} \; # All css files must be included in html ones
-find docs/ -name "*.js"  -exec rm {} \; # All  js files must be included in html ones
+find docs/ -name "*.json" -exec rm {} \; # All json files must be included in html ones
+find docs/ -name "*.svg"  -exec rm {} \; # All svg files must be included in html ones
+find docs/ -name "*.css"  -exec rm {} \; # All css files must be included in html ones
+find docs/ -name "*.js"   -exec rm {} \; # All  js files must be included in html ones
 rm docs/progetti.html # Remove intermediate file for docs/progetti/index.html generation
 rm docs/blog.html     # Remove intermediate file for docs/progetti/index.html generation
 rm docs/template.html

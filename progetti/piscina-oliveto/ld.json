@@ -1,0 +1,28 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ArchitecturalDesign",
+  "name": "Piscina nell'oliveto - Integrazione Paesaggistica",
+  "description": "Progetto di piscina a tre profondità integrata in un oliveto a Montecatini Alto. Design a basso impatto ambientale con solarium in teak e bordo vasca in gres color sabbia.",
+  "location": {
+    "@type": "Place",
+    "name": "Montecatini Alto, Toscana",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Montecatini Terme",
+      "addressRegion": "PT",
+      "addressCountry": "IT"
+    }
+  },
+  "creator": {
+    "@type": "Person",
+    "name": "Claudia Negrini",
+    "url": "https://www.cnarchstudio.com/claudia-negrini.html"
+  },
+  "material": ["Teak", "Gres beige sabbia", "Acciaio (pergolato)"],
+  "mainEntityOfPage": "True",
+  "image": [
+    "https://www.cnarchstudio.com/portfolio/piscina-oliveto/piscina-oliveto.webp",
+    "https://www.cnarchstudio.com/portfolio/piscina-oliveto/pianta.webp",
+    "https://www.cnarchstudio.com/portfolio/piscina-oliveto/illuminazione-notturna.webp"
+  ]
+}

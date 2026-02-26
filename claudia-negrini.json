@@ -1,0 +1,23 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Claudia Negrini",
+  "jobTitle": "Architetto e Ingegnere",
+  "url": "https://www.cnarchstudio.com/claudia-negrini.html",
+  "image": "https://www.cnarchstudio.com/arch-claudia-negrini.jpg",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Università di Pisa"
+  },
+  "knowsAbout": ["Architettura", "Interior Design", "Restauro", "Ingegneria Edile"],
+  "description": "Claudia Negrini, laureata in Ingegneria Edile-Architettura presso l'Università di Pisa. Libera professionista specializzata in progettazione architettonica e design d'interni, attiva in Toscana.",
+  "worksFor": {
+    "@type": "ArchitectureOffice",
+    "name": "CNArchStudio",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Toscana",
+      "addressCountry": "IT"
+    }
+  }
+}

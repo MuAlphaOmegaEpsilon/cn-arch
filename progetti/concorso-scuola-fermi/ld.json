@@ -1,0 +1,32 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ArchitecturalDesign",
+  "name": "Nuova Scuola E. Fermi e Masterplan Area Turri",
+  "description": "Progetto di concorso per il polo scolastico secondario e riqualificazione urbana dell'area Turri a Scandicci. Un'integrazione tra architettura, natura e tessuto cittadino adiacente al Centro Civico di Richard Rogers.",
+  "location": {
+    "@type": "Place",
+    "name": "Scandicci, Firenze",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Scandicci",
+      "addressRegion": "FI",
+      "addressCountry": "IT"
+    }
+  },
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Claudia Negrini"
+    },
+    {
+      "@type": "Organization",
+      "name": "Atlhab Architects"
+    }
+  ],
+  "mainEntityOfPage": "True",
+  "image": [
+    "https://www.cnarchstudio.com/portfolio/scuola-fermi/planimetria.webp",
+    "https://www.cnarchstudio.com/portfolio/scuola-fermi/skyline.webp",
+    "https://www.cnarchstudio.com/portfolio/scuola-fermi/polo-scolastico.webp"
+  ]
+}

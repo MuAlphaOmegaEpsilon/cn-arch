@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Portfolio Architetto Claudia Negrini - CNArchStudio",
+  "description": "Selezione dei progetti di architettura, interior design e concorsi di idee realizzati dall'Arch. Claudia Negrini.",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "ArchitecturalDesign",
+        "name": "Piscina nell'oliveto",
+        "description": "Vasca interrata integrata nel paesaggio collinare di Montecatini Alto.",
+        "url": "https://www.cnarchstudio.com/portfolio/piscina-oliveto/",
+        "image": "https://www.cnarchstudio.com/portfolio/piscina-oliveto/piscina-oliveto.webp"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "ArchitecturalDesign",
+        "name": "Appartamento Solferino",
+        "description": "Ristrutturazione d'interni in un palazzo dell'800 a Montecatini Terme.",
+        "url": "https://www.cnarchstudio.com/portfolio/appartamento-solferino/",
+        "image": "https://www.cnarchstudio.com/portfolio/appartamento-solferino/copertina.webp"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "ArchitecturalDesign",
+        "name": "Bagno Scotto",
+        "description": "Progettazione di un bagno spa privato con cromoterapia a Pisa.",
+        "url": "https://www.cnarchstudio.com/portfolio/bagno-scotto/",
+        "image": "https://www.cnarchstudio.com/portfolio/bagno-scotto/laterale.webp"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "ArchitecturalDesign",
+        "name": "Scuola Fermi e Masterplan Turri",
+        "description": "Concorso di riqualificazione urbana e nuovo polo scolastico a Scandicci.",
+        "url": "https://www.cnarchstudio.com/portfolio/concorso-scuola-fermi/",
+        "image": "https://www.cnarchstudio.com/portfolio/concorso-scuola-fermi/polo-scolastico.webp"
+      }
+    }
+  ]
+}

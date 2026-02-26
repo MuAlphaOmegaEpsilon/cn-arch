@@ -13,6 +13,7 @@ add_to_sitemap() { printf "  <url><lastmod>${LAST_MOD}</lastmod><loc>https://www
 rm -rf docs/
 mkdir docs/
 echo "www.cnarchstudio.com" > docs/CNAME
+cp claudia-negrini.json     docs/
 cp arch-claudia-negrini.jpg docs/
 cp logo.svg                 docs/
 cp -r blog/                 docs/

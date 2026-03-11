@@ -5,25 +5,81 @@
  <meta name="description" content="Il percorso professionale dell'Arch. Claudia Negrini inizia a Pisa, con la laurea magistrale in Ingegneria Edile-Architettura.">
  <script type="application/ld+json">{
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Claudia Negrini",
-  "jobTitle": "Architetto e Ingegnere",
-  "url": "https://www.cnarchstudio.com/claudia-negrini.html",
-  "image": "https://www.cnarchstudio.com/arch-claudia-negrini.jpg",
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "Università di Pisa"
-  },
-  "knowsAbout": ["Architettura", "Interior Design", "Restauro", "Ingegneria Edile"],
-  "description": "Claudia Negrini, laureata in Ingegneria Edile-Architettura presso l'Università di Pisa. Libera professionista specializzata in progettazione architettonica e design d'interni, attiva in Toscana.",
-  "worksFor": {
-    "@type": "ArchitectureOffice",
-    "name": "CNArchStudio",
-    "address": {
-      "@type": "PostalAddress",
-      "addressRegion": "Toscana",
-      "addressCountry": "IT"
-    }
+  "@type": "WebPage",
+  "@id": "https://www.cnarchstudio.com/claudia-negrini.html#webpage",
+  "name": "Claudia Negrini - Architetto e Ingegnere",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://www.cnarchstudio.com/claudia-negrini.html#person",
+    "name": "Claudia Negrini",
+    "gender": "Female",
+    "jobTitle": "Architetto e Ingegnere",
+    "url": "https://www.cnarchstudio.com/claudia-negrini.html",
+    "image": "https://www.cnarchstudio.com/arch-claudia-negrini.jpg",
+    "contactPoint": { "@id": "https://www.cnarchstudio.com/#contactpoint" },
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Abilitazione all'Esercizio della Professione di Architetto",
+        "credentialCategory": "Professional License",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Ordine degli Architetti, Pianificatori, Paesaggisti e Conservatori della Provincia di Pistoia",
+          "sameAs": "https://www.architettipistoia.it/"
+        }
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Abilitazione all'Esercizio della Professione di Ingegnere",
+        "credentialCategory": "Professional License",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Ordine degli Ingegneri della Provincia di Pistoia",
+          "sameAs": "https://www.ordineingegneri.pistoia.it/"
+        }
+      }
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/claudia-negrini-27a1201b3/",
+      "https://www.instagram.com/_claudianegrini_/",
+      "https://www.facebook.com/claudia.negrini.1",
+      "https://www.cnappc.it/risultato.aspx?Nome=Claudia&Cognome=Negrini&Ordine=89",
+      "https://www.ordineingegneri.pistoia.it/elenco-iscritti/?profileid=7178"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Università di Pisa",
+      "sameAs": "https://it.wikipedia.org/wiki/Università_di_Pisa"
+    },
+    "knowsAbout": [
+        {
+          "@type": "Thing",
+          "name": "Architettura",
+          "sameAs": "https://it.wikipedia.org/wiki/Architettura"
+        },
+        {
+          "@type": "Thing",
+          "name": "Interior Design",
+          "sameAs": "https://it.wikipedia.org/wiki/Architettura_degli_interni"
+        },
+        {
+          "@type": "Thing",
+          "name": "Restauro",
+          "sameAs": "https://it.wikipedia.org/wiki/Restauro"
+        },
+        {
+          "@type": "Thing",
+          "name": "Ristrutturazione",
+          "sameAs": "https://it.wikipedia.org/wiki/Intervento_edilizio"
+        },
+        {
+          "@type": "Thing",
+          "name": "Ingegneria Edile",
+          "sameAs": "https://it.wikipedia.org/wiki/Ingegneria_edile"
+        }
+    ],
+    "description": "Claudia Negrini, laureata in Ingegneria Edile-Architettura presso l'Università di Pisa. Libera professionista specializzata in progettazione architettonica e design d'interni, attiva in Toscana.",
+    "worksFor": { "@id": "https://www.cnarchstudio.com/#localbusiness" }
   }
 }
  </script>
@@ -155,7 +211,7 @@ function isbot()
 
 function ntfy(title)
 {
- if (window.location.protocol == "file:" || window.location.host.startsWith("192.168."))
+ if (window.location.protocol == "file:" || window.location.host.startsWith("192.168.1.") || window.location.host.startsWith("127.0.0.1"))
   return Promise.resolve();
  if (isbot())
   title = "🤖 " + title;

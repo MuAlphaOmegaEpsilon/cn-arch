@@ -4,6 +4,7 @@ set -euf
 cd "$(dirname $0)"/..
 
 LAST_MOD=$(date -I)
+INDEX_NOW_API_KEY=$(cat index-now-api-key.txt)
 
 add_to_sitemap() { printf "  <url><lastmod>${LAST_MOD}</lastmod><loc>https://www.cnarchstudio.com/%s</loc></url>\n" $1 >> docs/sitemap.xml; }
 
@@ -20,6 +21,7 @@ cp -r blog/                 docs/
 cp -r progetti/             docs/
 cp -a icons/.               docs/
 cp -a robots.txt            docs/
+cp -a index-now-api-key.txt docs/"${INDEX_NOW_API_KEY}.txt"
 cp template.html            docs/
 for CSS_FILE in $(find . -maxdepth 1 -name "*.css"     ); do esbuild --minify "${CSS_FILE}" > docs/"${CSS_FILE}"; done
 for JS_FILE  in $(find . -maxdepth 1 -name "*.js"      ); do cp "${JS_FILE}" docs/"${JS_FILE}";  done
@@ -108,7 +110,7 @@ m4 -DCONTENT="include(claudia-negrini.html)" \
    docs/template.html > docs/claudia-negrini.html
 echo "</urlset>" >> docs/sitemap.xml
 find docs/ -name "copertina.html" -exec rm {} \; # All copertina.html files were temporary
-find docs/ -name "*.txt" ! -name "robots.txt" -exec rm {} \; # All txt files, except robots.txt, were temporary
+find docs/ -name "*.txt" ! -name "robots.txt" ! -name "${INDEX_NOW_API_KEY}.txt" -exec rm {} \; # All txt files, except robots.txt and the IndexNow API key, were temporary
 find docs/ -name "*.json" -exec rm {} \; # All json files must be included in html ones
 find docs/ -name "*.svg"  -exec rm {} \; # All svg files must be included in html ones
 find docs/ -name "*.css"  -exec rm {} \; # All css files must be included in html ones

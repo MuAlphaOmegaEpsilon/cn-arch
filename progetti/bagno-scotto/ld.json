@@ -1,27 +1,29 @@
 {
   "@context": "https://schema.org",
-  "@type": "ArchitecturalDesign",
-  "name": "Bagno SPA Scotto - Wellness Privato",
-  "description": "Progettazione di un bagno SPA con vasca a pavimento, zona doccia integrata e sistema di cromoterapia in una residenza privata a Pisa.",
-  "location": {
-    "@type": "Place",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Pisa",
-      "addressRegion": "PI",
-      "addressCountry": "IT"
-    }
-  },
-  "creator": {
-    "@type": "Person",
-    "name": "Claudia Negrini",
-    "url": "https://www.cnarchstudio.com/claudia-negrini.html"
-  },
-  "material": ["Travertino", "Legno", "Vetro strutturale"],
-  "mainEntityOfPage": "True",
-  "image": [
-    "https://www.cnarchstudio.com/portfolio/bagno-scotto/laterale.webp",
-    "https://www.cnarchstudio.com/portfolio/bagno-scotto/ortogonale.webp",
-    "https://www.cnarchstudio.com/portfolio/bagno-scotto/cromoterapia.webp"
-  ]
+  "@type": "WebPage",
+  "@id": "https://www.cnarchstudio.com/progetti/bagno-scotto/#webpage",
+  "mainEntity": {
+    "@type": "CreativeWork",
+    "name": "META_TITLE",
+    "description": "META_DESCRIPTION",
+    "inLanguage": { "@type": "Language", "name": "Italian" },
+    "author": { "@id": "https://www.cnarchstudio.com/claudia-negrini.html#person" },
+    "provider": { "@id": "https://www.cnarchstudio.com/#localbusiness" },
+    "material": ["Travertino", "Legno", "Vetro strutturale"],
+    "contentLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pisa",
+        "addressRegion": "PI",
+        "addressCountry": "IT",
+        "postalCode": "56125"
+      }
+    },
+    "image": [
+      "https://www.cnarchstudio.com/progetti/bagno-scotto/laterale.webp",
+      "https://www.cnarchstudio.com/progetti/bagno-scotto/ortogonale.webp",
+      "https://www.cnarchstudio.com/progetti/bagno-scotto/cromoterapia.webp"
+    ]
+  }
 }

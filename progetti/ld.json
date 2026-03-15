@@ -1,56 +1,33 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://www.cnarchstudio.com/progetti.html#webpage",
+  "@id": "https://www.cnarchstudio.com/progetti/#webpage",
+  "url": "https://www.cnarchstudio.com/progetti/",
   "isPartOf": { "@id": "https://www.cnarchstudio.com/#website" },
   "mainEntity": {
     "@type": "ItemList",
-    "name": "Portfolio | CNArchStudio",
-    "description": "Selezione dei progetti di architettura, interior design e concorsi di idee realizzati da CNArchStudio.",
+    "name": "META_TITLE",
+    "description": "META_DESCRIPTION",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
-        "item": {
-          "@type": "Article",
-          "name": "Piscina nell'oliveto",
-          "description": "Vasca interrata integrata nel paesaggio collinare di Montecatini Alto.",
-          "url": "https://www.cnarchstudio.com/progetti/piscina-oliveto/",
-          "image": "https://www.cnarchstudio.com/progetti/piscina-oliveto/piscina-oliveto.webp"
-        }
+        "item": { "@id": "https://www.cnarchstudio.com/progetti/piscina-oliveto/#creativework" }
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "item": {
-          "@type": "Article",
-          "name": "Appartamento Solferino",
-          "description": "Ristrutturazione d'interni in un palazzo dell'800 a Montecatini Terme.",
-          "url": "https://www.cnarchstudio.com/progetti/appartamento-solferino/",
-          "image": "https://www.cnarchstudio.com/progetti/appartamento-solferino/copertina.webp"
-        }
+        "item": { "@id": "https://www.cnarchstudio.com/progetti/appartamento-solferino/#creativework" }
       },
       {
         "@type": "ListItem",
         "position": 3,
-        "item": {
-          "@type": "Article",
-          "name": "Bagno Scotto",
-          "description": "Progettazione di un bagno spa privato con cromoterapia a Pisa.",
-          "url": "https://www.cnarchstudio.com/progetti/bagno-scotto/",
-          "image": "https://www.cnarchstudio.com/progetti/bagno-scotto/laterale.webp"
-        }
+        "item": { "@id": "https://www.cnarchstudio.com/progetti/bagno-scotto/#creativework" }
       },
       {
         "@type": "ListItem",
         "position": 4,
-        "item": {
-          "@type": "Article",
-          "name": "Scuola Fermi e Masterplan Turri",
-          "description": "Concorso di riqualificazione urbana e nuovo polo scolastico a Scandicci.",
-          "url": "https://www.cnarchstudio.com/progetti/concorso-scuola-fermi/",
-          "image": "https://www.cnarchstudio.com/progetti/concorso-scuola-fermi/polo-scolastico.webp"
-        }
+        "item": { "@id": "https://www.cnarchstudio.com/progetti/concorso-scuola-fermi/#creativework" }
       }
     ]
   }

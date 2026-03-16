@@ -1,18 +1,19 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://www.cnarchstudio.com/progetti/piscina-oliveto/#webpage",
-  "url": "https://www.cnarchstudio.com/progetti/piscina-oliveto/",
+  "@id": "https://www.cnarchstudio.com/progetti/appartamento-solferino/#webpage",
+  "url": "https://www.cnarchstudio.com/progetti/appartamento-solferino/",
   "isPartOf": { "@id": "https://www.cnarchstudio.com/#website" },
   "mainEntity": {
     "@type": "CreativeWork",
-    "@id": "https://www.cnarchstudio.com/progetti/piscina-oliveto/#creativework",
+    "@id": "https://www.cnarchstudio.com/progetti/appartamento-solferino/#creativework",
     "name": "META_TITLE",
     "description": "META_DESCRIPTION",
     "inLanguage": "it-IT",
     "author": { "@id": "https://www.cnarchstudio.com/claudia-negrini.html#person" },
     "provider": { "@id": "https://www.cnarchstudio.com/#localbusiness" },
-    "location": {
+    "material": ["Travertino", "Legno", "Boiserie"],
+    "contentLocation": {
       "@type": "Place",
       "address": {
         "@type": "PostalAddress",
@@ -22,11 +23,10 @@
         "postalCode": "51016"
       }
     },
-    "material": ["Teak", "Gres beige sabbia", "Acciaio (pergolato)"],
     "image": [
-      "https://www.cnarchstudio.com/progetti/piscina-oliveto/piscina-oliveto.webp",
-      "https://www.cnarchstudio.com/progetti/piscina-oliveto/pianta.webp",
-      "https://www.cnarchstudio.com/progetti/piscina-oliveto/illuminazione-notturna.webp"
+      "https://www.cnarchstudio.com/progetti/appartamento-solferino/zona-giorno-1.webp",
+      "https://www.cnarchstudio.com/progetti/appartamento-solferino/zona-giorno-2.webp",
+      "https://www.cnarchstudio.com/progetti/appartamento-solferino/zona-giorno-3.webp"
     ]
   }
 }

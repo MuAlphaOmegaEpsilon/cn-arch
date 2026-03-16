@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
+  "@type": "AboutPage",
   "@id": "https://www.cnarchstudio.com/claudia-negrini.html#webpage",
   "name": "Claudia Negrini - Architetto e Ingegnere",
   "mainEntity": {

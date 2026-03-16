@@ -1,26 +1,19 @@
 {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "META_TITLE",
-  "description": "META_DESCRIPTION",
-  "image": "https://www.cnarchstudio.com/blog/abuso-del-bianco-mancanza-contenuti/pantone-color-of-the-year-2026-branding.webp",
-  "author": {
-    "@type": "Person",
-    "name": "Claudia Negrini",
-    "url": "https://www.cnarchstudio.com/claudia-negrini.html"
-  },
-  "publisher": {
-    "@type": "ArchitectureOffice",
-    "name": "CNArchStudio",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.cnarchstudio.com/icon.png"
-    }
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://www.cnarchstudio.com/blog/abuso-del-bianco-mancanza-contenuti/"
-  },
-  "keywords": "architettura, interior design, pantone 2026, cloud dancer, minimalismo, critica architettonica",
-  "articleBody": "Pantone ha annunciato il colore dell’anno 2026... solo così sarà possibile creare spazi autentici e a quel punto, il colore dell’anno potrebbe non servirci più."
+  "@type": "WebPage",
+  "@id": "https://www.cnarchstudio.com/blog/abuso-del-bianco-mancanza-contenuti/#webpage",
+  "url": "https://www.cnarchstudio.com/blog/abuso-del-bianco-mancanza-contenuti/",
+  "isPartOf": { "@id": "https://www.cnarchstudio.com/#website" },
+  "mainEntity": {
+    "@type": "BlogPosting",
+    "@id": "https://www.cnarchstudio.com/blog/abuso-del-bianco-mancanza-contenuti/#blogposting",
+    "headline": "META_TITLE",
+    "description": "META_DESCRIPTION",
+    "isPartOf": { "@id": "https://www.cnarchstudio.com/blog/#blog" },
+    "inLanguage": "it-IT",
+    "author": { "@id": "https://www.cnarchstudio.com/claudia-negrini.html#person" },
+    "publisher": { "@id": "https://www.cnarchstudio.com/#localbusiness" },
+    "image": "https://www.cnarchstudio.com/blog/abuso-del-bianco-mancanza-contenuti/pantone-color-of-the-year-2026-branding.webp",
+    "keywords": "architettura, interior design, pantone 2026, cloud dancer, minimalismo, critica architettonica"
+  }
 }

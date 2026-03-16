@@ -6,7 +6,7 @@
     "@type": "CreativeWork",
     "name": "META_TITLE",
     "description": "META_DESCRIPTION",
-    "inLanguage": { "@type": "Language", "name": "Italian" },
+    "inLanguage": "it-IT",
     "author": { "@id": "https://www.cnarchstudio.com/claudia-negrini.html#person" },
     "provider": { "@id": "https://www.cnarchstudio.com/#localbusiness" },
     "material": ["Travertino", "Legno", "Vetro strutturale"],

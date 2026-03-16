@@ -8,34 +8,11 @@
     "@type": "Blog",
     "name": "META_TITLE",
     "description": "META_DESCRIPTION",
-    "url": "https://www.cnarchstudio.com/blog/",
     "publisher": { "@id": "https://www.cnarchstudio.com/#localbusiness" },
     "author": { "@id": "https://www.cnarchstudio.com/claudia-negrini.html#person" },
     "blogPost": [
-      {
-        "@type": "BlogPosting",
-        "headline": "Dalla pianta libera allo spazio fluido",
-        "alternativeHeadline": "L'evoluzione necessaria dell'abitare",
-        "description": "Dall'antico rifugio, passando alla rigidità dei corridoi, fino allo spazio fluido post-pandemia.",
-        "image": "https://www.cnarchstudio.com/blog/spazi-fluidi-evoluzione-dell-abitare/paper-softwall-molo-design.jpg",
-        "url": "https://www.cnarchstudio.com/blog/spazi-fluidi-evoluzione-dell-abitare/",
-        "author": {
-          "@type": "Person",
-          "name": "Claudia Negrini"
-        }
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "11-4201 TCX Cloud Dancer",
-        "alternativeHeadline": "L’abuso del bianco e la mancanza di contenuti",
-        "description": "Cosa implica l'uso in architettura del colore neutro per eccellenza: il bianco Pantone 2026.",
-        "image": "https://www.cnarchstudio.com/blog/abuso-del-bianco-mancanza-contenuti/pantone-color-of-the-year-2026-branding.webp",
-        "url": "https://www.cnarchstudio.com/blog/abuso-del-bianco-mancanza-contenuti/",
-        "author": {
-          "@type": "Person",
-          "name": "Claudia Negrini"
-        }
-      }
+      { "@id": "https://www.cnarchstudio.com/blog/spazi-fluidi-evoluzione-dell-abitare/#blogposting" },
+      { "@id": "https://www.cnarchstudio.com/blog/abuso-del-bianco-mancanza-contenuti/#blogposting" }
     ]
   }
 }

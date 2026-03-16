@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
+  "@type": "CollectionPage",
   "@id": "https://www.cnarchstudio.com/progetti/#webpage",
   "url": "https://www.cnarchstudio.com/progetti/",
   "isPartOf": { "@id": "https://www.cnarchstudio.com/#website" },

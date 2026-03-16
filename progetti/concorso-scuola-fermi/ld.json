@@ -1,32 +1,31 @@
 {
   "@context": "https://schema.org",
-  "@type": "ArchitecturalDesign",
-  "name": "META_TITLE",
-  "description": "META_DESCRIPTION",
-  "location": {
-    "@type": "Place",
-    "name": "Scandicci, Firenze",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Scandicci",
-      "addressRegion": "FI",
-      "addressCountry": "IT"
-    }
-  },
-  "creator": [
-    {
-      "@type": "Person",
-      "name": "Claudia Negrini"
+  "@type": "WebPage",
+  "@id": "https://www.cnarchstudio.com/progetti/scuola-fermi/#webpage",
+  "url": "https://www.cnarchstudio.com/progetti/scuola-fermi/",
+  "isPartOf": { "@id": "https://www.cnarchstudio.com/#website" },
+  "mainEntity": {
+    "@type": "CreativeWork",
+    "@id": "https://www.cnarchstudio.com/progetti/scuola-fermi/#creativework",
+    "name": "META_TITLE",
+    "description": "META_DESCRIPTION",
+    "inLanguage": "it-IT",
+    "author": { "@id": "https://www.cnarchstudio.com/claudia-negrini.html#person" },
+    "provider": { "@id": "https://www.cnarchstudio.com/#localbusiness" },
+    "location": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Scandicci",
+        "addressRegion": "FI",
+        "addressCountry": "IT",
+        "postalCode": "50018"
+      }
     },
-    {
-      "@type": "Organization",
-      "name": "Atlhab Architects"
-    }
-  ],
-  "mainEntityOfPage": "True",
-  "image": [
-    "https://www.cnarchstudio.com/progetti/scuola-fermi/planimetria.webp",
-    "https://www.cnarchstudio.com/progetti/scuola-fermi/skyline.webp",
-    "https://www.cnarchstudio.com/progetti/scuola-fermi/polo-scolastico.webp"
-  ]
+    "image": [
+      "https://www.cnarchstudio.com/progetti/scuola-fermi/planimetria.webp",
+      "https://www.cnarchstudio.com/progetti/scuola-fermi/skyline.webp",
+      "https://www.cnarchstudio.com/progetti/scuola-fermi/polo-scolastico.webp"
+    ]
+  }
 }

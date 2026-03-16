@@ -7,7 +7,7 @@ html
 	scroll-behavior: smooth;
 	scrollbar-width: none;
 }
-html, body, main, footer, img, h1, h2, figcaption
+html, body, main, footer, img, video, iframe, figure, h1, h2, figcaption
 {
 	width: 100%;
 	margin: 0;
@@ -25,7 +25,7 @@ main
 	/* The content needs to occupy at least all the space needed to align the footer at the bottom of the viewport. */
 	min-height: calc(100vh - 35vmin);
 }
-div, p, figure, img, svg, main, footer, article, h1, h2
+div, p, section, figure, img, video, iframe, svg, main, footer, article, h1, h2
 {
 	float: left;
 }
@@ -58,7 +58,7 @@ p
 {
 	text-align: justify;
 }
-p, figure
+p, section, figure
 {
 	margin: 0;
 	margin-top: 1vmin;
